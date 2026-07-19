@@ -19,12 +19,10 @@ export function ContactBlock() {
           Contact
         </p>
         <h3 className="mt-4 font-display text-4xl leading-tight text-ink-900">
-          Let’s discuss your next infrastructure requirement.
+          Let's Build Your Next Project Together
         </h3>
         <p className="mt-4 text-base leading-7 text-steel-500">
-          This contact flow is ready for later backend or CRM integration. For now, the direct
-          phone and email actions are live and the form demonstrates the intended inquiry
-          experience.
+          our team is ready to help
         </p>
 
         <div className="mt-8 space-y-4">

@@ -14,7 +14,7 @@ describe('Home page', () => {
 
     expect(
       screen.getByRole('heading', {
-        name: /industrial utility and infrastructure execution with calm, dependable precision/i,
+        name: /Building reliable water and industrial infrastructure across India./i,
       }),
     ).toBeInTheDocument();
   });

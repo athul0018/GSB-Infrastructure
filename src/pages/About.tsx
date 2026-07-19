@@ -1,3 +1,4 @@
+import aboutScreenBackgroundImage from '@/assets/aboutScreenBackgroundImage.jpeg';
 import { PageHero } from '@/components/sections/PageHero';
 import { CardGrid, ProcessTimeline } from '@/components/sections/SharedSections';
 import { ButtonLink } from '@/components/ui/ButtonLink';
@@ -11,16 +12,19 @@ export default function About() {
   return (
     <>
       <PageHero
-        description="This page positions GSB Infrastructure as a careful, execution-led partner with a calm and professional corporate voice."
+        description="Since 2011, GSB Infrastructure has been delivering civil, mechanical, and water infrastructure projects across India. With expertise in water treatment plants, industrial utilities, pipeline systems, structural fabrication, and equipment installation, we provide dependable execution backed by technical expertise and disciplined project management.
+
+From planning and construction to commissioning support, our experienced teams work with leading EPC contractors, government agencies, and industrial clients to deliver safe, high-quality, and timely project outcomes."
+        backgroundImage={aboutScreenBackgroundImage}
         eyebrow="About"
-        title="A regional infrastructure company shaped around disciplined delivery and long-term support."
+        title="Engineering Infrastructure.Built on Trust."
       />
 
       <section className="py-24">
         <div className="container grid gap-12 lg:grid-cols-[0.95fr_1.05fr]">
           <SectionIntro
             eyebrow="Overview"
-            title="We present complex utility and civil scopes in a way stakeholders can trust quickly."
+            title="We deliver infrastructure that communities and industries rely on every day."
             description={companyInfo.description}
           />
           <div className="rounded-[28px] border border-steel-300/60 bg-white p-8 shadow-soft">
@@ -28,8 +32,8 @@ export default function About() {
               Mission & Vision
             </p>
             <p className="mt-5 text-base leading-8 text-steel-500">
-              The final profile can replace this block with verified origin story, mission, leadership,
-              and strategic positioning content without changing the surrounding page architecture.
+              To be a trusted engineering partner delivering sustainable infrastructure that creates lasting value for industries, communities, and future generations.
+              To deliver reliable infrastructure solutions through engineering excellence, disciplined execution, uncompromising safety, and a commitment to quality and client satisfaction.
             </p>
           </div>
         </div>
@@ -38,8 +42,8 @@ export default function About() {
       <section className="bg-white py-24">
         <div className="container space-y-10">
           <SectionIntro
-            eyebrow="Values"
-            title="The design system uses compact value cards to keep the narrative confident and readable."
+            eyebrow="Core Values"
+            title="Every project is planned and executed with precision to ensure safety, efficiency, and on-time delivery."
           />
           <CardGrid items={values} />
         </div>
@@ -55,7 +59,7 @@ export default function About() {
         </div>
       </section>
 
-      <section className="py-24">
+      {/* <section className="py-24">
         <div className="container grid gap-4 md:grid-cols-2">
           {whyChooseUs.map((item) => (
             <div
@@ -69,7 +73,7 @@ export default function About() {
         <div className="container mt-10">
           <ButtonLink href="/contact" label="Discuss a Project" />
         </div>
-      </section>
+      </section> */}
     </>
   );
 }

@@ -11,7 +11,7 @@ export function Footer() {
             {companyInfo.name}
           </p>
           <h2 className="mt-4 font-display text-4xl leading-tight">
-            Utility, civil, and infrastructure work delivered with clarity.
+            Building Reliable Water & Industrial Infrastructure.
           </h2>
           <p className="mt-4 text-sm leading-7 text-white/70">{companyInfo.description}</p>
         </div>

@@ -12,16 +12,17 @@ import {
   Wrench,
 } from 'lucide-react';
 
+import homeScreenBackgroundImage from '@/assets/homeScreenBackgroundImage.jpeg';
 import { createImageUrl } from '@/utils/media';
 
 export const siteNav = [
   { label: 'Home', href: '/' },
   { label: 'About', href: '/about' },
   { label: 'Services', href: '/services' },
-  { label: 'Products', href: '/products' },
-  { label: 'Industries', href: '/industries' },
+  // { label: 'Products', href: '/products' },
+  // { label: 'Industries', href: '/industries' },
   { label: 'Projects', href: '/projects' },
-  { label: 'Certifications', href: '/certifications' },
+  // { label: 'Certifications', href: '/certifications' },
   { label: 'Contact', href: '/contact' },
 ];
 
@@ -29,8 +30,8 @@ export const companyInfo = {
   name: 'GSB Infrastructure',
   tagline: 'Reliable infrastructure systems for industrial, commercial, and institutional projects.',
   description:
-    'GSB Infrastructure is presented as a regional engineering and infrastructure partner delivering utility systems, civil execution, and long-term support for facilities that need dependable project outcomes.',
-  address: '6/212A Pachat Veedu, Mannur PO, Kozhikode, Kerala - 673301',
+    'GSB Infrastructure specializes in the construction of water treatment plants, pipeline systems, industrial utilities, and civil-mechanical infrastructure. We deliver projects with precision, quality workmanship, and a strong commitment to safety, reliability, and timely execution.',
+  address: '6/212A, Mannur PO, Kozhikode, Kerala - 673301',
   email: 'gsbinfra9@gmail.com',
   phone: '9656536188',
   landline: '0495 2470058',
@@ -43,38 +44,35 @@ export const heroContent = {
     'From water distribution infrastructure to civil support works and utility retrofits, GSB Infrastructure helps facilities move from planning to delivery with clarity and confidence.',
   primaryCta: { label: 'Request a Quote', href: '/contact' },
   secondaryCta: { label: 'View Services', href: '/services' },
-  image: createImageUrl(
-    'premium industrial infrastructure facility exterior, clean utility piping, engineered water systems, civil works context, professional corporate photography, Kerala India, warm daylight, minimalist composition, realistic',
-    'landscape_16_9',
-  ),
+  image: homeScreenBackgroundImage,
 };
 
 export const stats = [
-  { value: '12+', label: 'Years of execution-led project support', icon: HardHat },
-  { value: '40+', label: 'Projects across mixed-use sectors', icon: Building2 },
-  { value: '24/7', label: 'Response support for urgent system issues', icon: Phone },
-  { value: '100%', label: 'Commitment to delivery discipline', icon: ClipboardCheck },
+  { value: '15+ years', label: 'Delivering construction excellence since 2011.', icon: HardHat },
+  { value: '50+', label: 'Successfully executed across water and industrial infrastructure.', icon: Building2 },
+  { value: 'Pan-India Execution', label: 'Supporting major EPC contractors and public utility projects.', icon: Phone },
+  { value: '100%', label: 'Quality & Safety', icon: ClipboardCheck },
 ];
 
 export const services = [
   {
-    title: 'Water Distribution Infrastructure',
-    description: 'Pipeline installation, pumping support, and network upgrades for dependable utility delivery.',
+    title: 'Water Treatment Infrastructure',
+    description: 'Construction and execution of Water Treatment Plants (WTP), Sewage Treatment Plants (STP), Common Effluent Treatment Plants (CETP), and industrial water systems.',
     icon: Waves,
   },
   {
-    title: 'Industrial Utility Systems',
-    description: 'Process piping, tank installation, and facility utility integration for operational resilience.',
+    title: 'Pipeline & Utility Networks',
+    description: 'Installation of MS, DI, SS, CS, and UPVC pipelines, pumping systems, transmission mains, and utility networks.',
     icon: Droplets,
   },
   {
-    title: 'Civil and Structural Works',
-    description: 'Equipment foundations, support platforms, and site-ready civil works for plant and facility contexts.',
+    title: 'Mechanical & Process Systems',
+    description: 'Structural fabrication, equipment erection, process piping, storage tanks, clarifiers, digesters, pumps, and associated mechanical works.',
     icon: Building2,
   },
   {
-    title: 'Operation and Maintenance Support',
-    description: 'Inspection, troubleshooting, retrofit, and repair support to extend system performance.',
+    title: 'Operation & Maintenance',
+    description: 'Inspection, maintenance, troubleshooting, retrofit works and shutdown support.',
     icon: Wrench,
   },
 ];
@@ -142,41 +140,118 @@ export const industries = [
 ];
 
 export const processSteps = [
-  'Initial consultation and site understanding',
-  'Technical assessment and scope definition',
-  'Proposal, scheduling, and procurement alignment',
-  'Execution with coordination and quality checks',
-  'Testing, handover, and ongoing support',
+  {
+    title: 'Water & Wastewater Expertise',
+    description: 'Comprehensive capabilities in water, wastewater, and industrial infrastructure.',
+  },
+  {
+    title: 'Integrated Execution',
+    description:
+      'Civil, mechanical, structural, and pipeline works are delivered under one execution team.',
+  },
+  {
+    title: 'EPC Project Support',
+    description:
+      'Trusted execution partner for leading EPC contractors and major infrastructure projects.',
+  },
+  {
+    title: 'Experienced Team',
+    description:
+      'Experienced engineers, supervisors, technicians, and construction professionals support every phase.',
+  },
+  {
+    title: 'Quality & Safety',
+    description:
+      'Every project is delivered with strict quality standards and a strong safety culture.',
+  },
+  {
+    title: 'On-Time Delivery',
+    description:
+      'Projects are completed on schedule with consistent performance and client satisfaction.',
+  },
 ];
 
 export const projects = [
   {
-    title: 'Manufacturing Campus Utility Upgrade',
-    summary: 'A utility upgrade involving pumping, piping, and service continuity improvements for a Kozhikode industrial campus.',
-    sector: 'Manufacturing',
+    title: 'DM plant - Reliance Nagathane plant  ',
+    summary: 'Mechanical works including equipment erection,SS,UPVC piping, along with the installation of pumps,filters and tanks.',
+    sector: 'On going Project',
     image: createImageUrl(
-      'industrial campus utility upgrade, pipelines and mechanical systems, premium corporate case study photo, realistic daylight',
-      'landscape_16_9',
+    'industrial campus utility upgrade, pipelines and mechanical systems, premium corporate case study photo, realistic daylight',
+    'landscape_16_9',
+    )
+  },
+  {
+    title: '400 MLD desalination plant-Chennai',
+    summary: 'Mechanical works including equipment erection.',
+    sector: 'On going Project',
+    image: createImageUrl(
+    'industrial campus utility upgrade, pipelines and mechanical systems, premium corporate case study photo, realistic daylight',
+    'landscape_16_9',
     ),
   },
   {
-    title: 'Commercial Building Pumping Retrofit',
-    summary: 'Retrofit work for upgraded tank support and pressure management in a multi-story commercial site.',
-    sector: 'Commercial',
+    title: 'RO-ZLD Plant- JSW vijayanagar',
+    summary: 'Executed end-to-end uPVC piping projects, including support fabrication, testing, and commissioning.',
+    sector: 'JSW',
     image: createImageUrl(
-      'commercial building utility retrofit, mechanical room with pumps and tanks, realistic engineering photography',
-      'landscape_16_9',
+    'industrial campus utility upgrade, pipelines and mechanical systems, premium corporate case study photo, realistic daylight',
+    'landscape_16_9',
     ),
   },
-  {
-    title: 'Institutional Drainage and Civil Support',
-    summary: 'Example civil and drainage support work designed around safety, timelines, and operational continuity.',
-    sector: 'Institutional',
+   {
+    title: '4 MLD foxconn Elephant Project- Bengaluru',
+    summary: 'Mechanical works including equipment erection,SS,UPVC piping, along with the installation of pumps, tanks, and MBBR,MBR,oil skimmer etc.',
+    sector: 'Gradiant (Foxconn)',
     image: createImageUrl(
       'institutional facility civil works and drainage system, professional construction photography, clean composition, realistic',
       'landscape_16_9',
     ),
   },
+  {
+    title: '40 MLD TTP- Gazhiabad',
+    summary: 'laying, alignment, and jointing of a high-capacity 900 mm diameter DI transmission mainline.Handled all civil and mechanical works, completed hydro pressure testing',
+    sector: 'VA Tech WABAG',
+    image: createImageUrl(
+    'industrial campus utility upgrade, pipelines and mechanical systems, premium corporate case study photo, realistic daylight',
+    'landscape_16_9',
+    ),
+  },
+  {
+ 
+  title: '150 MLD Desalination Plant-Chennai (O&M)',
+  summary: 'Mechanical screen removal and installation of a new screening system, including equipment alignment.fabrication and erection of a dome roof for the UF permeate tank, installation of an access stair with supporting structural steel', 
+  sector: 'VA Tech WABAG',
+  image: createImageUrl(
+    'industrial campus utility upgrade, pipelines and mechanical systems, premium corporate case study photo, realistic daylight',
+    'landscape_16_9',
+  ),
+
+  },
+  {
+    title: '20 MLD CETP- Kanpur',
+    summary: 'Mechanical works including equipment erection, boiler works, MS, SS, CS, and UPVC piping, along with the installation of pumps, tanks, and filter press systems.',
+    sector: 'VA Tech WABAG (Namami Ganga)',
+    image: createImageUrl(
+      'commercial building utility retrofit, mechanical room with pumps and tanks, realistic engineering photography',
+      'landscape_16_9',
+    ),
+  },
+ 
+  {
+ 
+  title: '90 MLD STP-Bengaluru, Karnataka',
+  summary: '• Mechanical Erection \n• Clarifier Installation \n• Thickener Installation \n• Pipeline Works', // <-- Added comma
+  sector: 'VA Tech WABAG (BWSSB)',
+  image: createImageUrl(
+    'industrial campus utility upgrade, pipelines and mechanical systems, premium corporate case study photo, realistic daylight',
+    'landscape_16_9',
+  ),
+
+  },
+
+  
+ 
 ];
 
 export const certifications = [
@@ -200,26 +275,31 @@ export const certifications = [
 export const values = [
   {
     title: 'Execution Discipline',
-    description: 'We structure work carefully so site delivery stays practical, coordinated, and measurable.',
+    description: 'Careful planning and coordinated execution ensure safe, efficient, and timely project delivery.',
     icon: ClipboardCheck,
   },
   {
-    title: 'Technical Clarity',
-    description: 'We simplify complex utility and civil requirements into decisions that teams can act on quickly.',
+    title: 'Engineering Excellence',
+    description: 'We apply technical expertise and industry best practices to deliver reliable infrastructure solutions.',
     icon: Droplets,
   },
   {
-    title: 'Long-Term Support',
-    description: 'We stay involved beyond handover with maintenance-minded thinking and responsive follow-up.',
+    title: 'Quality & Safety',
+    description: 'Quality workmanship and safe execution are fundamental to every project we undertake.',
+    icon: Wrench,
+  },
+  {
+    title: 'Long-Term Partnership',
+    description: 'We build lasting relationships through dependable service, transparency, and continued support.',
     icon: Wrench,
   },
 ];
 
 export const whyChooseUs = [
-  'Structured planning and site coordination',
-  'Utility, civil, and support capability under one roof',
-  'Clear communication for procurement and facility teams',
-  'Compliance and quality-proof framework presented in a clear, replaceable structure',
+  'Execution Discipline',
+  'Engineering Excellence',
+  'Quality & Safety',
+  'Long-Term Partnership',
 ];
 
 export const contactOptions = [

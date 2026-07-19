@@ -4,11 +4,26 @@ type PageHeroProps = {
   eyebrow: string;
   title: string;
   description: string;
+  backgroundImage?: string;
 };
 
-export function PageHero({ eyebrow, title, description }: PageHeroProps) {
+export function PageHero({
+  eyebrow,
+  title,
+  description,
+  backgroundImage,
+}: PageHeroProps) {
+  const sectionStyle = backgroundImage
+    ? {
+        backgroundImage: `linear-gradient(135deg, rgba(14, 26, 36, 0.88), rgba(23, 108, 105, 0.68)), url(${backgroundImage})`,
+      }
+    : undefined;
+
   return (
-    <section className="bg-ink-900 py-20 text-white sm:py-24">
+    <section
+      className="bg-ink-900 bg-cover bg-center bg-no-repeat py-20 text-white sm:py-24"
+      style={sectionStyle}
+    >
       <div className="container max-w-5xl">
         <motion.p
           className="text-xs font-semibold uppercase tracking-[0.3em] text-aqua-500"

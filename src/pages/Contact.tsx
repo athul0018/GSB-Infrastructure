@@ -10,17 +10,17 @@ export default function Contact() {
   return (
     <>
       <PageHero
-        description="The contact page keeps the conversion flow simple: direct contact options first, then a clear form."
+        description="Whether you're planning a new water treatment facility, upgrading existing infrastructure, or seeking reliable execution support, our team is ready to help."
         eyebrow="Contact"
-        title="Get in touch for project planning, utility upgrades, retrofits, or support requirements."
+        title="Let's Build Your Next Project Together"
       />
 
       <section className="py-24">
         <div className="container space-y-10">
           <SectionIntro
             eyebrow="Inquiry"
-            title="Use the form for planning conversations or contact GSB Infrastructure directly."
-            description="This inquiry flow is frontend-ready and can be wired into email or CRM tools later."
+            title="Let's Discuss Your Requirements"
+            description="Tell us about your project, and our team will get back to you promptly."
           />
           <ContactBlock />
         </div>

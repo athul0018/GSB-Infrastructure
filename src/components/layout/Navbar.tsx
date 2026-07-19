@@ -2,6 +2,7 @@ import { Menu, X } from 'lucide-react';
 import { useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 
+import companyLogo from '@/assets/Company Logo.png';
 import { siteNav } from '@/data/site';
 
 import { ButtonLink } from '../ui/ButtonLink';
@@ -12,16 +13,12 @@ export function Navbar() {
   return (
     <header className="sticky top-0 z-50 border-b border-white/10 bg-ink-900/90 backdrop-blur">
       <div className="container flex h-20 items-center justify-between">
-        <Link className="flex items-center gap-3" to="/">
-          <div className="flex h-10 w-10 items-center justify-center rounded-full border border-white/20 bg-white/5 text-sm font-bold text-white">
-            GSB
-          </div>
-          <div>
-            <p className="text-sm font-semibold uppercase tracking-[0.22em] text-white/70">
-              GSB Infrastructure
-            </p>
-            <p className="text-xs text-white/50">Engineering & utility execution</p>
-          </div>
+        <Link className="flex h-full items-center justify-center" to="/">
+          <img
+            alt="GSB Infrastructure logo"
+            className="block h-40 w-auto object-contain sm:h-30 mt-1 "
+            src={companyLogo}
+          />
         </Link>
 
         <nav className="hidden items-center gap-7 lg:flex">

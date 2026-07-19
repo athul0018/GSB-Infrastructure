@@ -23,8 +23,13 @@ export default function Home() {
 
   return (
     <>
-      <section className="overflow-hidden bg-ink-900 py-20 text-white sm:py-28">
-        <div className="container grid items-center gap-12 lg:grid-cols-[1.05fr_0.95fr]">
+      <section
+        className="overflow-hidden bg-ink-900 bg-cover bg-center bg-no-repeat py-20 text-white sm:py-28"
+        style={{
+          backgroundImage: `linear-gradient(135deg, rgba(14, 26, 36, 0.88), rgba(23, 108, 105, 0.68)), url(${heroContent.image})`,
+        }}
+      >
+        <div className="container max-w-5xl">
           <motion.div
             initial={{ opacity: 0, y: 22 }}
             animate={{ opacity: 1, y: 0 }}
@@ -48,20 +53,6 @@ export default function Home() {
               />
             </div>
           </motion.div>
-
-          <motion.div
-            className="relative"
-            initial={{ opacity: 0, y: 24 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.65, delay: 0.12 }}
-          >
-            <div className="absolute -left-6 -top-6 h-32 w-32 rounded-full bg-aqua-500/20 blur-3xl" />
-            <img
-              alt="GSB Infrastructure hero visual"
-              className="relative h-[460px] w-full rounded-[32px] border border-white/10 object-cover shadow-2xl"
-              src={heroContent.image}
-            />
-          </motion.div>
         </div>
       </section>
 
@@ -82,10 +73,10 @@ export default function Home() {
         <div className="container grid gap-12 lg:grid-cols-[0.9fr_1.1fr]">
           <SectionIntro
             eyebrow="Company Introduction"
-            title="A corporate website shaped around trust, delivery discipline, and technical clarity."
+            title="Built on trust, quality, and disciplined execution."
             description={companyInfo.description}
           />
-          <div className="grid gap-4 sm:grid-cols-2">
+          {/* <div className="grid gap-4 sm:grid-cols-2">
             {whyChooseUs.map((item) => (
               <div
                 key={item}
@@ -94,7 +85,7 @@ export default function Home() {
                 {item}
               </div>
             ))}
-          </div>
+          </div> */}
         </div>
       </section>
 
@@ -102,14 +93,14 @@ export default function Home() {
         <div className="container space-y-10">
           <SectionIntro
             eyebrow="Core Services"
-            title="Integrated service lines built for utility, civil, and operational infrastructure needs."
-            description="The homepage uses structured provisional content so the site can progress before final business copy arrives."
+            title="Comprehensive construction expertise delivering reliable water, utility, and industrial infrastructure through disciplined project execution."
+            description="Experienced leadership and management ensure that each project is delivered on time."
           />
           <CardGrid items={services} />
         </div>
       </section>
 
-      <section className="bg-mist-100 py-24">
+      {/* <section className="bg-mist-100 py-24">
         <div className="container space-y-10">
           <SectionIntro
             eyebrow="Industries Served"
@@ -118,20 +109,20 @@ export default function Home() {
           />
           <CardGrid items={industries} />
         </div>
-      </section>
+      </section> */}
 
       <section className="py-24">
         <div className="container space-y-10">
           <SectionIntro
-            eyebrow="Project Process"
-            title="A clear path from site review to delivery and long-term support."
-            description="The motion and layout remain restrained so the page feels premium and readable instead of overloaded."
+            eyebrow="Why GSB Infrastructure"
+            title="Our experience, technical expertise, and disciplined execution enable us to deliver reliable infrastructure"
+        
           />
           <ProcessTimeline items={processSteps} />
         </div>
       </section>
 
-      <section className="bg-white py-24">
+      {/* <section className="bg-white py-24">
         <div className="container space-y-10">
           <SectionIntro
             eyebrow="Featured Products"
@@ -140,14 +131,14 @@ export default function Home() {
           />
           <CardGrid items={products} variant="media" />
         </div>
-      </section>
+      </section> */}
 
       <section className="bg-mist-100 py-24">
         <div className="container space-y-10">
           <SectionIntro
             eyebrow="Projects"
-            title="Proof-oriented project highlights designed to reassure procurement and facility teams."
-            description="Project summaries remain provisional for now, but the layout is production-ready."
+            title="Proven Construction. Trusted Delivery."
+            description="From water treatment facilities to industrial utilities and large-scale pipeline networks, our projects reflect our commitment to quality, safety, and disciplined execution."
           />
           <CardGrid items={projects} variant="media" />
         </div>
@@ -156,7 +147,7 @@ export default function Home() {
       <section className="py-24">
         <div className="container space-y-10">
           <SectionIntro
-            eyebrow="Certifications"
+            eyebrow="Company Profile"
             title="Compliance and quality signals presented in a calm, credibility-led format."
             description="Certification badges are presented in a way that supports safe replacement with verified claims later."
           />
@@ -183,9 +174,9 @@ export default function Home() {
       <section className="py-24">
         <div className="container space-y-10">
           <SectionIntro
-            eyebrow="Contact"
-            title="Choose the fastest route to discuss a project, utility upgrade, or support need."
-            description="The page supports both direct contact actions and a frontend-ready inquiry experience."
+            eyebrow="Inquary"
+            title="Let's Discuss Your Requirements"
+            description="Tell us about your project, and our team will get back to you promptly."
           />
           <ContactBlock />
         </div>

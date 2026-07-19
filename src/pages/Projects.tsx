@@ -11,16 +11,16 @@ export default function Projects() {
   return (
     <>
       <PageHero
-        description="Projects are framed as proof of execution quality, sector familiarity, and delivery discipline."
+        description="From water treatment facilities to industrial utilities and large-scale pipeline networks, our projects reflect our commitment to quality, safety, and disciplined execution."
         eyebrow="Projects"
-        title="Case-study style project highlights that show how proof will be presented once verified details arrive."
+        title="Proven Construction. Trusted Delivery."
       />
 
       <section className="py-24">
         <div className="container space-y-10">
           <SectionIntro
             eyebrow="Featured Work"
-            title="A proof-led project grid positioned for future case study depth and image-rich storytelling."
+            title="Proven Construction. Trusted Delivery."
           />
           <CardGrid items={projects} variant="media" />
         </div>
@@ -29,7 +29,7 @@ export default function Projects() {
       <section className="bg-mist-100 py-24">
         <div className="container space-y-10">
           <SectionIntro
-            eyebrow="Supporting Metrics"
+            eyebrow="Our Experience"
             title="Project proof becomes stronger when paired with delivery, response, and process signals."
           />
           <CardGrid
