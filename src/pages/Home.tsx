@@ -114,9 +114,8 @@ export default function Home() {
       <section className="py-24">
         <div className="container space-y-10">
           <SectionIntro
-            eyebrow="Why GSB Infrastructure"
-            title="Our experience, technical expertise, and disciplined execution enable us to deliver reliable infrastructure"
-        
+            eyebrow="Meet Our Leadership"
+            title="Experienced Leadership. Trusted Execution."        
           />
           <ProcessTimeline items={processSteps} />
         </div>

@@ -52,8 +52,8 @@ From planning and construction to commissioning support, our experienced teams w
       <section className="bg-mist-100 py-24">
         <div className="container space-y-10">
           <SectionIntro
-            eyebrow="How We Work"
-            title="Execution is presented as a staged process instead of an abstract promise."
+            eyebrow="Meet Our Leadership"
+            title="Experienced Leadership. Trusted Execution."
           />
           <ProcessTimeline items={processSteps} />
         </div>

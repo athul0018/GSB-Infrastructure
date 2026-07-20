@@ -4,6 +4,7 @@ import { ButtonLink } from '@/components/ui/ButtonLink';
 import { SectionIntro } from '@/components/ui/SectionIntro';
 import { projects, stats } from '@/data/site';
 import { usePageMeta } from '@/utils/meta';
+import ProjectScreenBackgroundImage from '@/assets/ProjectScreenBackgroundImage.png'
 
 export default function Projects() {
   usePageMeta('Projects', 'Selected project highlights and proof');
@@ -14,6 +15,7 @@ export default function Projects() {
         description="From water treatment facilities to industrial utilities and large-scale pipeline networks, our projects reflect our commitment to quality, safety, and disciplined execution."
         eyebrow="Projects"
         title="Proven Construction. Trusted Delivery."
+        backgroundImage={ProjectScreenBackgroundImage}
       />
 
       <section className="py-24">

@@ -2,7 +2,7 @@ import { PageHero } from '@/components/sections/PageHero';
 import { CardGrid, ProcessTimeline } from '@/components/sections/SharedSections';
 import { ButtonLink } from '@/components/ui/ButtonLink';
 import { SectionIntro } from '@/components/ui/SectionIntro';
-import { processSteps, services } from '@/data/site';
+import { processSteps, services, values } from '@/data/site';
 import { usePageMeta } from '@/utils/meta';
 import serviceScreenBackgroundImage from '@/assets/serviceScreenBackgroundImage.jpeg';
 
@@ -34,7 +34,7 @@ export default function Services() {
             eyebrow="Why GSB Infrastructure"
             title="Our experience, technical expertise, and disciplined execution enable us to deliver reliable infrastructure solutions with quality, safety, and lasting value."
           />
-          <ProcessTimeline items={processSteps} />
+          <ProcessTimeline items={values} />
         </div>
       </section>
 

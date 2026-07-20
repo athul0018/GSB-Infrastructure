@@ -13,7 +13,10 @@ import {
 } from 'lucide-react';
 
 import homeScreenBackgroundImage from '@/assets/homeScreenBackgroundImage.jpeg';
+import Delhi from '@/assets/Delhi.jpg';
+import Kanpur from '@/assets/Kanpur.jpg';
 import { createImageUrl } from '@/utils/media';
+import { T } from 'vitest/dist/chunks/reporters.d.BuRON0I0.js';
 
 export const siteNav = [
   { label: 'Home', href: '/' },
@@ -31,10 +34,10 @@ export const companyInfo = {
   tagline: 'Reliable infrastructure systems for industrial, commercial, and institutional projects.',
   description:
     'GSB Infrastructure specializes in the construction of water treatment plants, pipeline systems, industrial utilities, and civil-mechanical infrastructure. We deliver projects with precision, quality workmanship, and a strong commitment to safety, reliability, and timely execution.',
-  address: '6/212A, Mannur PO, Kozhikode, Kerala - 673301',
+  address: '6/212A,Near CSI Church, Mannur PO, Kozhikode, Kerala - 673328',
   email: 'gsbinfra9@gmail.com',
   phone: '9656536188',
-  landline: '0495 2470058',
+  landline: '9847345633',
 };
 
 export const heroContent = {
@@ -48,7 +51,7 @@ export const heroContent = {
 };
 
 export const stats = [
-  { value: '15+ years', label: 'Delivering construction excellence since 2011.', icon: HardHat },
+  { value: '14+ years', label: 'Delivering construction excellence since 2011.', icon: HardHat },
   { value: '50+', label: 'Successfully executed across water and industrial infrastructure.', icon: Building2 },
   { value: 'Pan-India Execution', label: 'Supporting major EPC contractors and public utility projects.', icon: Phone },
   { value: '100%', label: 'Quality & Safety', icon: ClipboardCheck },
@@ -141,34 +144,15 @@ export const industries = [
 
 export const processSteps = [
   {
-    title: 'Water & Wastewater Expertise',
-    description: 'Comprehensive capabilities in water, wastewater, and industrial infrastructure.',
+    title: 'Ganesan P \n (Managing Partner)',
+    description: 'With over 30 years of experience in industrial and infrastructure construction, Ganesan P. leads GSB Infrastructure with a strong focus on quality, execution, and client satisfaction. His leadership has been instrumental in delivering complex projects across India and overseas.',
   },
   {
-    title: 'Integrated Execution',
+    title: 'Balarajan P \n (Partner)',
     description:
-      'Civil, mechanical, structural, and pipeline works are delivered under one execution team.',
+      'Balarajan P. brings over 20 years of experience in infrastructure project execution. He oversees project delivery with a commitment to operational excellence, timely completion, and quality workmanship.',
   },
-  {
-    title: 'EPC Project Support',
-    description:
-      'Trusted execution partner for leading EPC contractors and major infrastructure projects.',
-  },
-  {
-    title: 'Experienced Team',
-    description:
-      'Experienced engineers, supervisors, technicians, and construction professionals support every phase.',
-  },
-  {
-    title: 'Quality & Safety',
-    description:
-      'Every project is delivered with strict quality standards and a strong safety culture.',
-  },
-  {
-    title: 'On-Time Delivery',
-    description:
-      'Projects are completed on schedule with consistent performance and client satisfaction.',
-  },
+ 
 ];
 
 export const projects = [
@@ -212,10 +196,7 @@ export const projects = [
     title: '40 MLD TTP- Gazhiabad',
     summary: 'laying, alignment, and jointing of a high-capacity 900 mm diameter DI transmission mainline.Handled all civil and mechanical works, completed hydro pressure testing',
     sector: 'VA Tech WABAG',
-    image: createImageUrl(
-    'industrial campus utility upgrade, pipelines and mechanical systems, premium corporate case study photo, realistic daylight',
-    'landscape_16_9',
-    ),
+    image: Delhi,
   },
   {
  
@@ -232,10 +213,7 @@ export const projects = [
     title: '20 MLD CETP- Kanpur',
     summary: 'Mechanical works including equipment erection, boiler works, MS, SS, CS, and UPVC piping, along with the installation of pumps, tanks, and filter press systems.',
     sector: 'VA Tech WABAG (Namami Ganga)',
-    image: createImageUrl(
-      'commercial building utility retrofit, mechanical room with pumps and tanks, realistic engineering photography',
-      'landscape_16_9',
-    ),
+    image: Kanpur,
   },
  
   {
