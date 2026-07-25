@@ -8,13 +8,10 @@ import {
   certifications,
   companyInfo,
   heroContent,
-  industries,
   processSteps,
-  products,
   projects,
   services,
   stats,
-  whyChooseUs,
 } from '@/data/site';
 import { usePageMeta } from '@/utils/meta';
 

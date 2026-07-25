@@ -1,15 +1,84 @@
 import { FormEvent, useState } from 'react';
+import { send } from '@emailjs/browser';
 
 import { companyInfo, contactOptions } from '@/data/site';
+import {
+  EMAILJS_PUBLIC_KEY,
+  EMAILJS_SERVICE_ID,
+  EMAILJS_TEMPLATE_ID,
+  EMAIL_URL,
+} from '@/config/envConstants';
 
 import { ButtonLink } from '../ui/ButtonLink';
 
-export function ContactBlock() {
-  const [submitted, setSubmitted] = useState(false);
+type SubmissionStatus = 'idle' | 'submitting' | 'success' | 'error';
 
-  const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
+const emailJsConfig = {
+  publicKey: EMAILJS_PUBLIC_KEY,
+  serviceId: EMAILJS_SERVICE_ID,
+  templateId: EMAILJS_TEMPLATE_ID,
+};
+
+const isEmailJsConfigured = Object.values(emailJsConfig).every(
+  (value) => typeof value === 'string' && value.trim().length > 0,
+);
+
+const getFieldValue = (formData: FormData, fieldName: string) =>
+  String(formData.get(fieldName) ?? '').trim();
+
+export function ContactBlock() {
+  const [submissionStatus, setSubmissionStatus] = useState<SubmissionStatus>('idle');
+  const [feedbackMessage, setFeedbackMessage] = useState<string | null>(null);
+
+  const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    setSubmitted(true);
+
+    const form = event.currentTarget;
+    setSubmissionStatus('submitting');
+    setFeedbackMessage(null);
+
+    if (!isEmailJsConfigured) {
+      setSubmissionStatus('error');
+      setFeedbackMessage(
+        'Contact form is not configured yet. Add the EmailJS environment variables to enable submissions.',
+      );
+      return;
+    }
+
+    try {
+      const formData = new FormData(form);
+      const name = getFieldValue(formData, 'name');
+      const company = getFieldValue(formData, 'company');
+      const email = getFieldValue(formData, 'email');
+      const phone = getFieldValue(formData, 'phone');
+      const message = getFieldValue(formData, 'message');
+
+      await send(emailJsConfig.serviceId, emailJsConfig.templateId, {
+        name,
+        from_name: name,
+        company,
+        from_company: company,
+        email,
+        reply_to: email,
+        phone,
+        message,
+        to_email: EMAIL_URL || companyInfo.email,
+      }, {
+        publicKey: emailJsConfig.publicKey,
+      });
+
+      form.reset();
+      setSubmissionStatus('success');
+      setFeedbackMessage(
+        'Inquiry sent successfully. Our team will review your message and get back to you soon.',
+      );
+    } catch (error) {
+      console.error('Failed to send contact form via EmailJS.', error);
+      setSubmissionStatus('error');
+      setFeedbackMessage(
+        'We could not send your inquiry right now. Please try again or use the direct email option below.',
+      );
+    }
   };
 
   return (
@@ -53,6 +122,7 @@ export function ContactBlock() {
             Name
             <input
               className="mt-2 w-full rounded-md border border-steel-300 bg-cloud-50 px-4 py-3 outline-none transition focus:border-aqua-500 focus:ring-4 focus:ring-aqua-500/15"
+              autoComplete="name"
               name="name"
               required
               type="text"
@@ -62,6 +132,7 @@ export function ContactBlock() {
             Company
             <input
               className="mt-2 w-full rounded-md border border-steel-300 bg-cloud-50 px-4 py-3 outline-none transition focus:border-aqua-500 focus:ring-4 focus:ring-aqua-500/15"
+              autoComplete="organization"
               name="company"
               type="text"
             />
@@ -70,6 +141,7 @@ export function ContactBlock() {
             Email
             <input
               className="mt-2 w-full rounded-md border border-steel-300 bg-cloud-50 px-4 py-3 outline-none transition focus:border-aqua-500 focus:ring-4 focus:ring-aqua-500/15"
+              autoComplete="email"
               name="email"
               required
               type="email"
@@ -79,6 +151,7 @@ export function ContactBlock() {
             Phone
             <input
               className="mt-2 w-full rounded-md border border-steel-300 bg-cloud-50 px-4 py-3 outline-none transition focus:border-aqua-500 focus:ring-4 focus:ring-aqua-500/15"
+              autoComplete="tel"
               name="phone"
               type="tel"
             />
@@ -89,23 +162,33 @@ export function ContactBlock() {
           <textarea
             className="mt-2 min-h-36 w-full rounded-md border border-steel-300 bg-cloud-50 px-4 py-3 outline-none transition focus:border-aqua-500 focus:ring-4 focus:ring-aqua-500/15"
             name="message"
+            rows={6}
             required
           />
         </label>
 
         <div className="mt-6 flex flex-col gap-4 sm:flex-row sm:items-center">
           <button
-            className="inline-flex items-center justify-center rounded-md bg-ink-900 px-5 py-3 text-sm font-semibold text-white transition hover:bg-aqua-600"
+            className="inline-flex items-center justify-center rounded-md bg-ink-900 px-5 py-3 text-sm font-semibold text-white transition hover:bg-aqua-600 disabled:cursor-not-allowed disabled:opacity-70"
+            disabled={submissionStatus === 'submitting'}
             type="submit"
           >
-            Send Inquiry
+            {submissionStatus === 'submitting' ? 'Sending...' : 'Send Inquiry'}
           </button>
           <ButtonLink href={`mailto:${companyInfo.email}`} label="Email Directly" variant="secondary" />
         </div>
 
-        {submitted ? (
-          <p className="mt-4 rounded-xl bg-aqua-500/10 px-4 py-3 text-sm text-aqua-600">
-            Inquiry received. Connect this form to email or CRM in the final integration phase.
+        {feedbackMessage ? (
+          <p
+            aria-live="polite"
+            className={`mt-4 rounded-xl px-4 py-3 text-sm ${
+              submissionStatus === 'success'
+                ? 'bg-aqua-500/10 text-aqua-600'
+                : 'bg-red-500/10 text-red-700'
+            }`}
+            role={submissionStatus === 'error' ? 'alert' : 'status'}
+          >
+            {feedbackMessage}
           </p>
         ) : null}
       </form>
