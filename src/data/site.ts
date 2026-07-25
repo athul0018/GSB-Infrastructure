@@ -6,6 +6,7 @@ import {
   Droplets,
   Factory,
   HardHat,
+  Import,
   Phone,
   ShieldCheck,
   Waves,
@@ -15,6 +16,14 @@ import {
 import homeScreenBackgroundImage from '@/assets/homeScreenBackgroundImage.jpeg';
 import Delhi from '@/assets/Delhi.jpg';
 import Kanpur from '@/assets/Kanpur.jpg';
+import DM from '@/assets/DM.jpeg';
+import Perurchennai from '@/assets/Perurchennai.jpeg';
+import JSW from '@/assets/JSW.jpg';
+import Devanahalli from '@/assets/Devanahalli.jpg';
+import kcbangalore from '@/assets/kcbangalore.jpg';
+import OMNemli from '@/assets/OMNemli.jpeg';
+
+
 import { createImageUrl } from '@/utils/media';
 import { T } from 'vitest/dist/chunks/reporters.d.BuRON0I0.js';
 
@@ -41,7 +50,7 @@ export const companyInfo = {
 };
 
 export const heroContent = {
-  eyebrow: 'Regional Infrastructure Partner',
+  eyebrow: '',
   title: 'Industrial utility and infrastructure execution with calm, dependable precision.',
   description:
     'From water distribution infrastructure to civil support works and utility retrofits, GSB Infrastructure helps facilities move from planning to delivery with clarity and confidence.',
@@ -160,38 +169,27 @@ export const projects = [
     title: 'DM plant - Reliance Nagathane plant  ',
     summary: 'Mechanical works including equipment erection,SS,UPVC piping, along with the installation of pumps,filters and tanks.',
     sector: 'On going Project',
-    image: createImageUrl(
-    'industrial campus utility upgrade, pipelines and mechanical systems, premium corporate case study photo, realistic daylight',
-    'landscape_16_9',
-    )
+     image: DM,
   },
   {
     title: '400 MLD desalination plant-Chennai',
     summary: 'Mechanical works including equipment erection.',
     sector: 'On going Project',
-    image: createImageUrl(
-    'industrial campus utility upgrade, pipelines and mechanical systems, premium corporate case study photo, realistic daylight',
-    'landscape_16_9',
-    ),
+     image: Perurchennai,
   },
   {
     title: 'RO-ZLD Plant- JSW vijayanagar',
-    summary: 'Executed end-to-end uPVC piping projects, including support fabrication, testing, and commissioning.',
+    summary: 'Executed end-to-end piping projects, including Aeration system, chemical dosing, support fabrication, testing, and commissioning.',
     sector: 'JSW',
-    image: createImageUrl(
-    'industrial campus utility upgrade, pipelines and mechanical systems, premium corporate case study photo, realistic daylight',
-    'landscape_16_9',
-    ),
+    image: JSW,
   },
+
    {
     title: '4 MLD foxconn Elephant Project- Bengaluru',
     summary: 'Mechanical works including equipment erection,SS,UPVC piping, along with the installation of pumps, tanks, and MBBR,MBR,oil skimmer etc.',
     sector: 'Gradiant (Foxconn)',
-    image: createImageUrl(
-      'institutional facility civil works and drainage system, professional construction photography, clean composition, realistic',
-      'landscape_16_9',
-    ),
-  },
+    image: Devanahalli,
+   },
   {
     title: '40 MLD TTP- Gazhiabad',
     summary: 'laying, alignment, and jointing of a high-capacity 900 mm diameter DI transmission mainline.Handled all civil and mechanical works, completed hydro pressure testing',
@@ -203,10 +201,7 @@ export const projects = [
   title: '150 MLD Desalination Plant-Chennai (O&M)',
   summary: 'Mechanical screen removal and installation of a new screening system, including equipment alignment.fabrication and erection of a dome roof for the UF permeate tank, installation of an access stair with supporting structural steel', 
   sector: 'VA Tech WABAG',
-  image: createImageUrl(
-    'industrial campus utility upgrade, pipelines and mechanical systems, premium corporate case study photo, realistic daylight',
-    'landscape_16_9',
-  ),
+  image: OMNemli,
 
   },
   {
@@ -221,10 +216,7 @@ export const projects = [
   title: '90 MLD STP-Bengaluru, Karnataka',
   summary: '• Mechanical Erection \n• Clarifier Installation \n• Thickener Installation \n• Pipeline Works', // <-- Added comma
   sector: 'VA Tech WABAG (BWSSB)',
-  image: createImageUrl(
-    'industrial campus utility upgrade, pipelines and mechanical systems, premium corporate case study photo, realistic daylight',
-    'landscape_16_9',
-  ),
+  image: kcbangalore,
 
   },
 
