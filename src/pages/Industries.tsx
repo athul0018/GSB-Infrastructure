@@ -6,7 +6,13 @@ import { industries, services } from '@/data/site';
 import { usePageMeta } from '@/utils/meta';
 
 export default function Industries() {
-  usePageMeta('Industries', 'Sector coverage and solution mapping');
+  usePageMeta({
+    title: 'Industries We Serve',
+    description:
+      'See how GSB Infrastructure supports manufacturing, institutions, commercial facilities, and large developments with reliable utility and infrastructure solutions.',
+    path: '/industries',
+    breadcrumb: [{ name: 'Industries', path: '/industries' }],
+  });
 
   return (
     <>

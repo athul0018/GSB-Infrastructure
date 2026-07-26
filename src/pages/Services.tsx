@@ -7,7 +7,14 @@ import { usePageMeta } from '@/utils/meta';
 import serviceScreenBackgroundImage from '@/assets/serviceScreenBackgroundImage.jpeg';
 
 export default function Services() {
-  usePageMeta('Services', 'Infrastructure and utility service overview');
+  usePageMeta({
+    title: 'Infrastructure Services',
+    description:
+      'Explore GSB Infrastructure services including water treatment plants, pipeline systems, industrial utilities, civil works, and project execution support.',
+    path: '/services',
+    image: serviceScreenBackgroundImage,
+    breadcrumb: [{ name: 'Services', path: '/services' }],
+  });
 
   return (
     <>

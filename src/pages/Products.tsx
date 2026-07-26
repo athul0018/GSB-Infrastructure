@@ -6,7 +6,13 @@ import { products } from '@/data/site';
 import { usePageMeta } from '@/utils/meta';
 
 export default function Products() {
-  usePageMeta('Products', 'Product catalog for GSB Infrastructure');
+  usePageMeta({
+    title: 'Infrastructure Products',
+    description:
+      'View GSB Infrastructure product capabilities including booster skids, storage tanks, filtration modules, and pump or control assemblies for industrial applications.',
+    path: '/products',
+    breadcrumb: [{ name: 'Products', path: '/products' }],
+  });
 
   return (
     <>

@@ -16,7 +16,13 @@ import {
 import { usePageMeta } from '@/utils/meta';
 
 export default function Home() {
-  usePageMeta('Home', companyInfo.tagline);
+  usePageMeta({
+    title: 'Water Treatment and Industrial Infrastructure Company',
+    description:
+      'GSB Infrastructure delivers water treatment plants, utility systems, pipelines, and industrial infrastructure projects with quality, safety, and timely execution.',
+    path: '/',
+    image: heroContent.image,
+  });
 
   return (
     <>

@@ -6,7 +6,14 @@ import { usePageMeta } from '@/utils/meta';
 import ContactScreenBackgroundImage from '@/assets/ContactScreenBackgroundImage.png';
 
 export default function Contact() {
-  usePageMeta('Contact', `Contact ${companyInfo.name}`);
+  usePageMeta({
+    title: 'Contact GSB Infrastructure',
+    description:
+      'Contact GSB Infrastructure for water treatment, pipeline, utility, and industrial infrastructure project discussions, enquiries, and execution support.',
+    path: '/contact',
+    image: ContactScreenBackgroundImage,
+    breadcrumb: [{ name: 'Contact', path: '/contact' }],
+  });
 
   return (
     <>

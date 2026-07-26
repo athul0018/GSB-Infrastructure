@@ -7,7 +7,14 @@ import { usePageMeta } from '@/utils/meta';
 import ProjectScreenBackgroundImage from '@/assets/ProjectScreenBackgroundImage.png'
 
 export default function Projects() {
-  usePageMeta('Projects', 'Selected project highlights and proof');
+  usePageMeta({
+    title: 'Infrastructure Projects',
+    description:
+      'Review selected GSB Infrastructure projects across water treatment, desalination, pipeline, and industrial utility execution environments.',
+    path: '/projects',
+    image: ProjectScreenBackgroundImage,
+    breadcrumb: [{ name: 'Projects', path: '/projects' }],
+  });
 
   return (
     <>

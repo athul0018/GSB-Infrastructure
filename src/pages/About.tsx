@@ -7,7 +7,14 @@ import { companyInfo, processSteps, values, whyChooseUs } from '@/data/site';
 import { usePageMeta } from '@/utils/meta';
 
 export default function About() {
-  usePageMeta('About', `About ${companyInfo.name}`);
+  usePageMeta({
+    title: 'About GSB Infrastructure',
+    description:
+      'Learn about GSB Infrastructure, our engineering expertise, execution approach, and commitment to quality, safety, and dependable infrastructure delivery.',
+    path: '/about',
+    image: aboutScreenBackgroundImage,
+    breadcrumb: [{ name: 'About', path: '/about' }],
+  });
 
   return (
     <>

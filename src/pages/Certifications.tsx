@@ -6,7 +6,13 @@ import { certifications } from '@/data/site';
 import { usePageMeta } from '@/utils/meta';
 
 export default function Certifications() {
-  usePageMeta('Certifications', 'Quality and compliance presentation');
+  usePageMeta({
+    title: 'Quality and Certifications',
+    description:
+      'Explore the quality, compliance, and certification presentation structure used by GSB Infrastructure to communicate trust and execution standards.',
+    path: '/certifications',
+    breadcrumb: [{ name: 'Certifications', path: '/certifications' }],
+  });
 
   return (
     <>
