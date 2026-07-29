@@ -10,7 +10,7 @@ import Products from '@/pages/Products';
 import Projects from '@/pages/Projects';
 import Services from '@/pages/Services';
 
-function NotFound() {
+function NotFound() { 
   return (
     <section className="bg-cloud-50 py-24">
       <div className="container rounded-[28px] border border-steel-300/60 bg-white p-10 shadow-soft">
